@@ -1,6 +1,23 @@
 [package]
-name = "piece-table"
+name = "pbtree"
 version = "0.1.0"
 edition = "2024"
+description = "A fast, generic piece-table text buffer backed by a balanced B+ tree"
+readme = "README.md"
+license = "MIT"
+documentation = "https://docs.rs/pbtree"
+keywords = ["piece-table", "text-buffer", "editor", "rope", "b-tree"]
+categories = ["text-processing", "data-structures"]
+rust-version = "1.85"
 
 [dependencies]
+memchr = "2.8.0"
+regex = "1.12.3"
+unicode-segmentation = "1.13.2"
+
+[dev-dependencies]
+criterion = "0.8.2"
+
+[[bench]]
+name = "bench"
+harness = false
